@@ -17,11 +17,12 @@ def predict_attack(user_input_dict):
     prediction = rf.predict(input_array)[0]
 
     if prediction == 0:
-        print("✅ Normal Traffic Detected")
+        print(" Normal Traffic Detected")
     else:
-        print("🚨 Attack Detected!")
+        print("Attack Detected!")
 
-# --- Example run ---
+# Example run
 sample_input = {feat: 0 for feat in feature_names}  # dummy data
 sample_input[feature_names[0]] = 10  # set first feature to 10 for testing
 predict_attack(sample_input)
+
